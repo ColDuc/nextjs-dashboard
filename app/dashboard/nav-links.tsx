@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   UserGroupIcon,
@@ -11,10 +11,11 @@ import clsx from "clsx";
 
 export default function NavLinks() {
   const pathname = usePathname();
+  const links = [{name : 'name', href: 'www.google.com'}];
   return (
     <>
       {links.map((link) => {
-        const LinkIcon = link.icon;
+        // const LinkIcon = link;
         return (
           <Link
             key={link.name}
@@ -26,7 +27,7 @@ export default function NavLinks() {
               }
             )}
           >
-            <LinkIcon className="w-6" />
+            {/* <LinkIcon className="w-6" /> */}
             <p className="hidden md:block">{link.name}</p>
           </Link>
         );
